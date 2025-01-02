@@ -1,4 +1,4 @@
-import { DataPagination, Pageable } from "@/types"
+import type { DataPagination, Pageable } from "@/types"
 
 import apiClient from "@/lib/api-client"
 

@@ -1,7 +1,7 @@
 import { apiRoutes } from "@/routes"
 import { Service } from "@/services/service"
 
-import { Module, User } from "@/types/model-types"
+import type { Module, User } from "@/types/model.ts"
 import apiClient from "@/lib/api-client"
 
 export class UserService extends Service<User> {

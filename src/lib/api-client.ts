@@ -10,7 +10,8 @@ enum RequestMethod {
 
 class ApiClient {
     async fetcher(endpoint: string, options?: RequestInit): Promise<Response> {
-        const url: string = `${import.meta.env.API_BASE_URL}${endpoint}`
+        console.log(import.meta.env.PUBLIC_API_BASE_URL)
+        const url: string = `${import.meta.env.PUBLIC_API_BASE_URL}${endpoint}`
         return await fetch(url, {
             ...options,
             headers: {
