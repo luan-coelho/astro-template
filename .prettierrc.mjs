@@ -1,0 +1,40 @@
+/** @type {import("prettier").Config} */
+export default {
+    plugins: ["prettier-plugin-astro"],
+    overrides: [
+        {
+            files: "*.astro",
+            options: {
+                parser: "astro",
+            },
+        },
+    ],
+    endOfLine: "auto",
+    semi: false,
+    singleQuote: false,
+    tabWidth: 4,
+    trailingComma: "all",
+    htmlWhitespaceSensitivity: "ignore",
+    bracketSameLine: true,
+    printWidth: 120,
+    arrowParens: "avoid",
+    importOrder: [
+        "^(react/(.*)$)|^(react$)",
+        "^(next/(.*)$)|^(next$)",
+        "<THIRD_PARTY_MODULES>",
+        "",
+        "^types$",
+        "^@/types/(.*)$",
+        "^@/config/(.*)$",
+        "^@/lib/(.*)$",
+        "^@/hooks/(.*)$",
+        "^@/components/ui/(.*)$",
+        "^@/components/(.*)$",
+        "^@/styles/(.*)$",
+        "^@/app/(.*)$",
+        "",
+        "^[./]",
+    ],
+    importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
+    importOrderTypeScriptVersion: "5.0.2",
+}
